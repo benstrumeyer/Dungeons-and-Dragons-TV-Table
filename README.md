@@ -99,6 +99,17 @@ A web-based TTRPG battlemap interface running on a TV used as a tabletop. The TV
 - **Foundry VTT modules** — inspiration for hooks-based scripting (not a hard dependency)
 - Roll20 API — optional, not a primary target
 
+### Voice Recognition
+- Always-listening mic on the table picks up spell/action keywords
+- Someone says "Fireball" → fireball sound effect + VFX triggers on the table
+- "Healing Word" → healing chime + green glow on target
+- "Eldritch Blast" → crackling energy SFX
+- Could map any spell name to a sound + animation combo
+- DM can say "Roll for initiative" → initiative tracker auto-opens with fanfare
+- Configurable keyword → action map (JSON or UI editor)
+- WisprFlow / Whisper API for transcription, keyword matching on the output
+- Stretch: voice tone detection — whispering triggers quieter/subtler effects, shouting triggers bigger ones
+
 ### Hand Signs & TouchDesigner
 - Hand gesture recognition for casting spells
 - TouchDesigner integration for advanced visual effects
