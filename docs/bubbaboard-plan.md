@@ -51,15 +51,20 @@ A web-based TTRPG battlemap interface running on a TV used as a tabletop. The TV
 - Invisible tokens visible only on DM's end (for hidden enemies, traps)
 - DM moves digital tokens; effects target the physical token space
 
+### Player Mobile App (MVP — the primary way players interact with the table)
+- Players connect their phones to the table via WebRTC/WebSocket
+- **This is how players do everything** — the table is a shared display, the phone is the controller
+- Move their own token from their phone (no double-move problem)
+- Push-to-talk: say a spell name → triggers sound + VFX on the table
+- Play sound effects / personal anime themes out of the table speakers
+- Trigger emotes on their token (purely cosmetic, anytime, no gameplay effect)
+- View their own character info (HP, spell slots, conditions)
+
 ---
 
 ## Post-MVP Features
 
-### Player Companion App (Phone/WebRTC)
-- Players connect their phones to the table
-- Move their own token from their phone
-- Play sound effects / personal anime themes out of the table speakers
-- Trigger emotes on their token (purely cosmetic, anytime, no gameplay effect)
+### Player Mobile App (Extended)
 - Light a torch (if lighting system is active)
 - Interactive spell input — e.g., swirl on phone to mix a cauldron
 - Cast a spell from D&D Beyond app, choose target on the table
@@ -100,7 +105,8 @@ A web-based TTRPG battlemap interface running on a TV used as a tabletop. The TV
 - Roll20 API — optional, not a primary target
 
 ### Voice Recognition
-- Always-listening mic on the table picks up spell/action keywords
+- **Push-to-talk on phone app** — hold button, say the spell, release → triggers on the table
+- Alternatively: always-listening mic on the table picks up spell/action keywords (noisier, more false triggers)
 - Someone says "Fireball" → fireball sound effect + VFX triggers on the table
 - "Healing Word" → healing chime + green glow on target
 - "Eldritch Blast" → crackling energy SFX
